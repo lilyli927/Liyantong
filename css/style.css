@@ -1,0 +1,204 @@
+/* === Global Settings === */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #ffffff;
+  color: #222222;
+  scroll-behavior: smooth;
+}
+
+/* === Hero Section Fullscreen with Background === */
+.hero {
+  height: 100vh;
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* === Semi-transparent white overlay === */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(255, 255, 255, 0.4); /* Light white overlay */
+  z-index: 1;
+}
+
+/* === Content Container on Top of Overlay === */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* === Name Title === */
+.name {
+  font-size: 2rem;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  color: #222;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* === Subtitle === */
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* === Main Title === */
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeInUp 2s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* === Button === */
+.btn-custom {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 12px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  animation: fadeInUp 2.3s ease forwards;
+  animation-delay: 0.9s;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+/* === Text Animation === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style for the navigation bar */
+.navbar {
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  font-size: 1.1rem;
+}
+
+/* name Logo */
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Navigation link style */
+.nav-link {
+  color: #333333 !important;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #000000 !important;
+  font-weight: 600;
+}
+
+/* Apply global font styles */
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+}
+
+/* About Me Section */
+#about {
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+#about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+#about p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Image styling */
+#about img {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* General reset */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+/* Section title styling */
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* Section description styling */
+.section-description {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Image row layout */
+.image-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+/* Image styling */
+.image-row img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+/* Image hover zoom effect */
+.image-row img:hover {
+  transform: scale(1.05);
+}
+
+/* Image click link */
+.image-row a {
+  display: inline-block;
+}
+
+
